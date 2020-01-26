@@ -1,8 +1,22 @@
 debug = true
+-- Player table
 player = { x = 200, y = 710, speed = 150, img = nil }
 
+-- Timers
+canShoot = true
+canShootTimerMax = 0.2
+canShootTimer = canShootTimerMax
+
+-- Bullet 
+bullet = {}
+bulletImg = nil
+
+
 function love.load()
+
 	player.img = love.graphics.newImage('assets/plane.png')	
+	bullet.img = love.graphics.newImage('assets/bullet.png')
+
 end
 
 function love.update(dt)
